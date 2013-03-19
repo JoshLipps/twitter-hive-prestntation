@@ -9,7 +9,11 @@
       <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css' />
       <link rel="stylesheet" href="css/main.css" />
-      <script src="http://d3js.org/d3.v3.min.js"></script>
+      <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+      <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+
+    </script>
  
     </head>
     <body>
@@ -20,6 +24,7 @@
         </div>
       </header>
 
+      <div id="visualization" style="width: 600px; height: 400px;"></div>
 
       <footer class="">
           <p> &copy; 2013 Sanya & Tim & Josh</p>
