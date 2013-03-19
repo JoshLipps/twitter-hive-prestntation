@@ -14,15 +14,21 @@
           ["TFB","9528"]
           ]);
       
-        // Create and draw the visualization.
-        var chart = new google.visualization.ColumnChart(document.getElementById('visualization'));
-        var options = {
-          title: 'Company Performance',
-          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
-        };
+
+          new google.visualization.ColumnChart(document.getElementById('visualization')).
+            draw(data,
+                 {title:"Popular Hashtags in past 24 Hours",
+                  width:600, height:400,
+                  hAxis: {title: "Year"}}
+            );
+      }
         
         chart.draw(data, options);
       }
       
 
       google.setOnLoadCallback(drawVisualization);
+
+
+      
+
