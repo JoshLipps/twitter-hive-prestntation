@@ -22,9 +22,6 @@
                   hAxis: {title: "Year"}}
             );
       }
-        
-        chart.draw(data, options);
-      }
       
 
       google.setOnLoadCallback(drawVisualization);
