@@ -25,6 +25,9 @@ function drawLines() {
         for (var i = 0; i < rows.length; i++)
         {
                 rows[i] = rows[i].split("\t");
+                if(hashs.indexOf(rows[i][0]) === -1) {
+                  hashs.push(rows[i][0]);
+                }
         }
 
                 //if(hashs.indexOf(rows[i][0]) === -1) {
