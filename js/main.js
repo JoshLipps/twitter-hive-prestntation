@@ -30,13 +30,13 @@ function drawLines() {
                 }
                 if(!parts[rows[i][1]]) {
                   parts[rows[i][1]]=[];
-                  parts[rows[i][1]].push(new Date(parseInt(rows[i][1])));
+                  parts[rows[i][1]].push(rows[i][1]);
                 }
                 parts[rows[i][1]].push(parseInt(rows[i][2]));
         }
         
         var hourlydata = new google.visualization.DataTable();
-        hourlydata.addColumn('date','Date');
+        hourlydata.addColumn('string','Date');
 
         $.each(hashs,function(index, tag){
            console.log("."+tag+".");
