@@ -14,6 +14,8 @@ function drawVisualization(){
     var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
     chart.draw(data, {width: 900, height: 400, min: 0,isVertical: true});
   });
+  .error(function() { alert("error"); })
+  .complete(function() { alert("complete"); });
 }
 
 
