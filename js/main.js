@@ -1,5 +1,6 @@
 $(document).ready(function() {
     google.setOnLoadCallback(drawVisualization);
+    console.log("ready");
 });
 
 function drawVisualization(){
