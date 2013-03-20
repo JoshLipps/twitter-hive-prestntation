@@ -40,7 +40,8 @@ function drawLines() {
 
         $.each(hashs,function(index, tag){
            console.log("."+tag+".");
-          hourlydata.addColumn('number',tag);
+           if(tag != "")
+            hourlydata.addColumn('number',tag);
         });
 
         $.each(parts,function(index, dateh){
