@@ -29,7 +29,7 @@ function drawLines(){
 
                 hashs += rows[i][0] + " ";
                 if (!parts[rows[i][1]])
-                  parts[[rows[i][1]]="";
+                  parts[rows[i][1]]="";
                 parts[rows[i][1]]+=rows[i][2]+" ";
         }
         
