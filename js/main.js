@@ -27,7 +27,7 @@ function drawLines(){
                 // Split on ", " in CSV data we received
                 rows[i] = rows[i].split("\t");
 
-                if(hashs.indexOf === -1)
+                if(hashs.indexOf(rows[i][0]) === -1)
                   hashs.push(rows[i][0]);
                 if (!parts[rows[i][1]])
                   parts[rows[i][1]]="";
