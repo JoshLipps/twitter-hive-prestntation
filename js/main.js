@@ -3,13 +3,17 @@
   
 
 
-          var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales'],
-          ['2004',  1000],
-          ['2005',  1170],
-          ['2006',  660],
-          ['2007',  1030]
-        ]);
+          var data = google.visualization.arrayToDataTable([['Hashtag','Count'],
+['KCA',61964],
+['RT',24213],
+['TeamFollowBack',20970],
+['gameinsight',19220],
+['VoteWhatMakesYouBeautiful',17585],
+['androidgames',15403],
+['android',14419],
+['TFBJP',14419],
+['90sBabyFollowTrain',11552],
+['TFB',9528]]);
 
       
         var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
