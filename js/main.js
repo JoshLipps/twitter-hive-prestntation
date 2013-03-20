@@ -39,7 +39,7 @@ function drawLines() {
         hourlydata.addColumn('string','date');
 
         $.each(hashs,function(index, tag){
-           console.log(tag);
+           console.log("."+tag+".");
           hourlydata.addColumn('number',tag);
         });
 
