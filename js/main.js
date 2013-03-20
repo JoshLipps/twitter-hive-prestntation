@@ -17,7 +17,7 @@
 
       
         var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
-        chart.draw(data, {width: 400, height: 240, min: 0,isVertical: true});
+        chart.draw(data, {width: 900, height: 400, min: 0,isVertical: true});
 
       }
       
