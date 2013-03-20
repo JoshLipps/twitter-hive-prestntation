@@ -4,6 +4,8 @@ $(document).ready(function() {
 });
 
 function drawVisualization(){
+  console.log("Drawing");
+
   $.getJSON('data/hashtags',function(hashtags){
     var data = google.visualization.arrayToDataTable(hashtags);
 
