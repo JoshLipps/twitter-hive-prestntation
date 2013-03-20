@@ -1,9 +1,8 @@
       function drawVisualization() {
         // Create and populate the data table.
         var data = google.visualization.arrayToDataTable([
-          ["firstHashtag","Count"],
-          ["KCA","61964"],
-          ["RT","24213"],
+          ["KCA","RT",
+          ["61964","24213"
           ["TeamFollowBack","20970"],
           ["gameinsight","19220"],
           ["VoteWhatMakesYouBeautiful","17585"],
@@ -14,13 +13,9 @@
           ["TFB","9528"]
           ]);
       
+        var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
+        chart.draw(data, {width: 400, height: 240, min: 0,isVertical: true});
 
-          new google.visualization.ColumnChart(document.getElementById('visualization')).
-            draw(data,
-                 {title:"Popular Hashtags in past 24 Hours",
-                  width:600, height:400,
-                  hAxis: {title: "Year"}}
-            );
       }
       
 
