@@ -1,7 +1,8 @@
       function drawVisualization() {
         // Create and populate the data table.
         var data = google.visualization.arrayToDataTable([
-          ["KCA","RT",
+          ['hashtags','count'],
+          ["KCA","RT"],
           ["61964","24213"
           ["TeamFollowBack","20970"],
           ["gameinsight","19220"],
