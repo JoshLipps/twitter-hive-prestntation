@@ -44,7 +44,7 @@ function drawLines() {
         });
 
         $.each(parts,function(index, dateh){
-          console.log(datah);
+          console.log(dateh);
           hourlydata.addRow(dateh);
         });        
 
