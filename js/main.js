@@ -13,31 +13,36 @@ function drawVisualization(){
     var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
     chart.draw(data, {width: 900, height: 400, min: 0});
 
-     var hourlydata = google.visualization.arrayToDataTable([
-          ['Month',   'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda'],
-          ['2004/05',    165,      938,         522,             998,           450],
-          ['2005/06',    135,      1120,        599,             1268,          288],
-          ['2006/07',    157,      1167,        587,             807,           397],
-          ['2007/08',    139,      1110,        615,             968,           215],
-          ['2008/09',    136,      691,         629,             1026,          366]
-        ]);
+    drawLines();
+  })
+.error(function(status,errorThrown) { console.log(errorThrown); })
+}
+
+function drawLines(){
+       $.get('data/hashtag_hours',function(data){
+        var obj = {};
+        rows = data.split("\n");
+        for (var i = 0; i < rows.length; i++)
+        {
+                // Split on ", " in CSV data we received
+                rows[i] = rows[i].split("\t");
+                obj[rows[0]][rows[1]]=rows[2];
+
+        }
+        console.log(obj);
+
       
         // Create and draw the visualization.
-        var ac = new google.visualization.AreaChart(document.getElementById('bars'));
+        var ac = new google.visualization.AreaChart(document.getElementById('lines'));
         ac.draw(hourlydata, {
           title : 'Popular Hashtags By Hour',
           isStacked: true,
           width: 900,
           height: 400,
         });
-  })
-.error(function(status,errorThrown) { console.log(errorThrown); })
-
-
-
-
+       })
+       
 }
-
 
       
 
