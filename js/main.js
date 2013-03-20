@@ -36,13 +36,14 @@ function drawLines(){
         var hourlydata = new google.visualization.DataTable();
         hourlydata.addColumn('string','Date');
 
-
+        console.log(hashs.trim().split(" "));
 
         $.each(hashs.trim().split(" "),function(index, tag){
           hourlydata.addColumn('number',tag);
         });
 
         $.each(parts,function(index, dateh){
+          console.log((index+" "+dateh).trim().split(" "));
           hourlydata.addRow((index+" "+dateh).trim().split(" "));
         });        
 
