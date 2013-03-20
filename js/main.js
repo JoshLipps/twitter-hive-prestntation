@@ -24,13 +24,11 @@ function drawLines() {
         rows = data.split("\n");
         for (var i = 0; i < rows.length; i++)
         {
-                // Split on ", " in CSV data we received
                 rows[i] = rows[i].split("\t");
-
-                if(hashs.indexOf(rows[i][0]) === -1) {
-                  hashs.push(rows[i][0]);
-                }
-                if(true) {}
+                //if(hashs.indexOf(rows[i][0]) === -1) {
+                //  hashs.push(rows[i][0]);
+                //}
+                //if(true) {}
                  //!parts[rows[i][1]] 
                //parts[rows[i][1]]=[];
                   //parts[rows[i][1]].push(parseInt(rows[i][1]);
