@@ -14,7 +14,7 @@ function drawVisualization(){
     chart.draw(data, {width: 900, height: 400, min: 0});
   })
 .success(function() { alert("second success"); })
-.error(function(errorThrown) { alert(errorThrown); })
+.error(function(jqXHR,status,errorThrown) { console.log(status+" "+errorThrown); })
 }
 
 
