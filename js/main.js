@@ -30,7 +30,7 @@ function drawLines() {
                 }
                 if(!parts[rows[i][1]]) {
                   parts[rows[i][1]]=[];
-                  parts[rows[i][1]].push(parseInt(rows[i][1]));
+                  parts[rows[i][1]].push(new Date(rows[i][1]));
                 }
                 parts[rows[i][1]].push(parseInt(rows[i][2]));
         }
