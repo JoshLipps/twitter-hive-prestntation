@@ -20,18 +20,39 @@ function drawVisualization(){
 
 function drawLines(){
        $.get('data/hashtag_hours',function(data){
-        var obj = {};
+        var parts = {},hashs="";
         rows = data.split("\n");
         for (var i = 0; i < rows.length; i++)
         {
                 // Split on ", " in CSV data we received
                 rows[i] = rows[i].split("\t");
-                if (!obj[rows[i][1]])
-                  obj[rows[i][1]] = {};
-                obj[rows[i][1]][rows[i][0]]=rows[i][2];
+
+                hashs += rows[i][0] + " ";
+                if (!parts[rows[i][1]])
+                  parts[[rows[i][1]]="";
+                parts[rows[i][1]]+=rows[i][2]+" ";
+
+                
 
         }
-        console.log(obj);
+time hash1 hash2 has3
+1     h1c
+2
+3
+
+        
+        var hourlydata = new google.visualization.DataTable();
+        hourlydata.addColumn('String','Date');
+
+
+
+        $.each(hashs.trim().split(" "),function(index, tag){
+          hourlydata.addColumn('Number',tag);
+        });
+
+        $each(parts,function(index, dateh){
+          hourlydata.addRow(dateh.trim().split(" ");
+        });        
 
       
         // Create and draw the visualization.
