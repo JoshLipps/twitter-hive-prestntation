@@ -7,7 +7,7 @@ function drawVisualization(){
   console.log("Drawing");
 
   var jqxhr = $.get('data/hashtags.json',function(hashtags){
-    var data = google.visualization.arrayToDataTable(hashtags);
+    var data = google.visualization.arrayToDataTable(hashtags.array);
     console.log("Data");
     
     var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
