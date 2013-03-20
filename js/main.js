@@ -34,16 +34,16 @@ function drawLines(){
         }
         
         var hourlydata = new google.visualization.DataTable();
-        hourlydata.addColumn('String','Date');
+        hourlydata.addColumn('string','Date');
 
 
 
         $.each(hashs.trim().split(" "),function(index, tag){
-          hourlydata.addColumn('Number',tag);
+          hourlydata.addColumn('number',tag);
         });
 
         $each(parts,function(index, dateh){
-          hourlydata.addRow(dateh.trim().split(" "));
+          hourlydata.addRow((index+" "+dateh).trim().split(" "));
         });        
 
       
