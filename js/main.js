@@ -20,14 +20,14 @@ function drawVisualization(){
 
 function drawLines(){
        $.get('data/hashtag_hours',function(data){
-        var parts = {},hashs="";
+        var parts = {},hashs={};
         rows = data.split("\n");
         for (var i = 0; i < rows.length; i++)
         {
                 // Split on ", " in CSV data we received
                 rows[i] = rows[i].split("\t");
 
-                hashs += rows[i][0] + " ";
+                hashs[rows[i][0]] = " ";
                 if (!parts[rows[i][1]])
                   parts[rows[i][1]]="";
                 parts[rows[i][1]]+=rows[i][2]+" ";
@@ -36,10 +36,11 @@ function drawLines(){
         var hourlydata = new google.visualization.DataTable();
         hourlydata.addColumn('string','Date');
 
-        console.log(hashs.trim().split(" "));
+       
 
-        $.each(hashs.trim().split(" "),function(index, tag){
-          hourlydata.addColumn('number',tag);
+        $.each(hashs,function(index, tag){
+           console.log(index);
+          hourlydata.addColumn('number',index);
         });
 
         $.each(parts,function(index, dateh){
