@@ -6,7 +6,7 @@ $(document).ready(function() {
 function drawVisualization(){
   console.log("Drawing");
 
-  $.getJSON('data/hashtags',function(hashtags){
+  $.getJSON('data/hashtags.json',function(hashtags){
     var data = google.visualization.arrayToDataTable(hashtags);
     console.log("Data");
     
