@@ -57,7 +57,7 @@ function drawLines() {
         var ac = new google.visualization.AreaChart(document.getElementById('lines'));
         ac.draw(hourlydata, {
           title : 'Popular Hashtags By Hour',
-          isStacked: true,
+          isStacked: false,
           width: 900,
           height: 400,
         });
