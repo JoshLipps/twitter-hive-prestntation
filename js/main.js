@@ -13,7 +13,7 @@ function drawVisualization(){
     var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
     chart.draw(data, {width: 900, height: 400, min: 0});
   })
-.error(function(jqXHR,status,errorThrown) { console.log(errorThrown); })
+.error(function(status,errorThrown) { console.log(errorThrown); })
 }
 
 
