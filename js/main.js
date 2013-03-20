@@ -42,7 +42,7 @@ function drawLines(){
           hourlydata.addColumn('number',tag);
         });
 
-        $each(parts,function(index, dateh){
+        $.each(parts,function(index, dateh){
           hourlydata.addRow((index+" "+dateh).trim().split(" "));
         });        
 
