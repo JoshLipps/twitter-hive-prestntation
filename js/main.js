@@ -35,9 +35,7 @@ function drawLines(){
         }
         
         var hourlydata = new google.visualization.DataTable();
-        hourlydata.addColumn('string','Date');
-
-       
+        //hourlydata.addColumn('string','Date');
 
         $.each(hashs,function(index, tag){
            console.log(tag);
