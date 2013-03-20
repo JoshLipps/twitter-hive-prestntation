@@ -43,7 +43,7 @@ function drawLines(){
         });
 
         $each(parts,function(index, dateh){
-          hourlydata.addRow(dateh.trim().split(" ");
+          hourlydata.addRow(dateh.trim().split(" "));
         });        
 
       
