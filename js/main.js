@@ -9,13 +9,11 @@ function drawVisualization(){
   $.getJSON('data/hashtags',function(hashtags){
     var data = google.visualization.arrayToDataTable(hashtags);
 
-    console.log("Data's: "+data);
+    console.log("Data's: "+hashtags);
     
     var chart = new google.visualization.ImageBarChart(document.getElementById('visualization'));
     chart.draw(data, {width: 900, height: 400, min: 0,isVertical: true});
   });
-  .error(function() { alert("error"); })
-  .complete(function() { alert("complete"); });
 }
 
 
