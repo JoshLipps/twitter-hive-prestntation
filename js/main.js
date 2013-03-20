@@ -45,7 +45,10 @@ function drawLines() {
 
         $.each(parts,function(index, dateh){
           console.log(dateh);
-          hourlydata.addRow(dateh);
+          if(typeof dateh[0] == 'number'){
+
+            hourlydata.addRow(dateh);
+          }
         });        
 
       
