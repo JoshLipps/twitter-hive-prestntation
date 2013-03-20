@@ -30,10 +30,11 @@ function drawLines() {
                 if(hashs.indexOf(rows[i][0]) === -1) {
                   hashs.push(rows[i][0]);
                 }
-                if(!parts[rows[i][1]]) {
-                  parts[rows[i][1]]=[];
-                  parts[rows[i][1]].push(parseInt(rows[i][1]);
-                  }
+                if(true) {}
+                 //!parts[rows[i][1]] 
+               //parts[rows[i][1]]=[];
+                  //parts[rows[i][1]].push(parseInt(rows[i][1]);
+                  //}
                 parts[rows[i][1]].push(parseInt(rows[i][2]);
         }
         
