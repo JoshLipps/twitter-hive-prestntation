@@ -26,8 +26,8 @@ function drawLines(){
         {
                 // Split on ", " in CSV data we received
                 rows[i] = rows[i].split("\t");
-                obj[rows[0]] = {};
-                obj[rows[0]][rows[1]]=rows[2];
+                obj[rows[i][0] = {};
+                obj[rows[i][1]][rows[i][2]]=rows[i][2];
 
         }
         console.log(obj);
