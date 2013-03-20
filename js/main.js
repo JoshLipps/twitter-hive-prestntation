@@ -46,7 +46,7 @@ function drawLines() {
 
         $.each(parts,function(index, dateh){
           console.log(dateh);
-          if(dateh.length == 11){
+          if(dateh.length >=4){
 
             hourlydata.addRow(dateh);
           }
