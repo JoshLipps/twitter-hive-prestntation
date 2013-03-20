@@ -31,15 +31,7 @@ function drawLines(){
                 if (!parts[rows[i][1]])
                   parts[[rows[i][1]]="";
                 parts[rows[i][1]]+=rows[i][2]+" ";
-
-                
-
         }
-time hash1 hash2 has3
-1     h1c
-2
-3
-
         
         var hourlydata = new google.visualization.DataTable();
         hourlydata.addColumn('String','Date');
